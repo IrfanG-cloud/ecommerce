@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'
 import { client } from '../../../lib/sanityClient'
-import Image from 'next/image';
+import Image from 'next/image'
 import { Image as IImage, useDataset } from 'sanity'
 import { urlForImage } from '../../../../sanity/lib/image'
 
-import Link from 'next/link';
-import Amountincrease from '@/app/components/Amountincrease';
+import Link from 'next/link'
+import Counter from '@/app/components/Counter'
 
 export const getProductData:any = async(param='') => {
 
@@ -40,6 +40,7 @@ export default async function page({ params }: { params: { id: string }}) {
 
  let param: string = params.id;
 
+
   const data= await getProductData(param);
     
    const handleAddToCart = async () => {
@@ -69,7 +70,7 @@ export default async function page({ params }: { params: { id: string }}) {
               </div>
  
               <div>
-              <div className='ml-4' my-6><Amountincrease /></div>
+              <div className='ml-4' my-6><Counter /></div>
               </div>
 
               <div className='flex my-4'>

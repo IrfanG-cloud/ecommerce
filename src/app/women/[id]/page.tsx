@@ -7,7 +7,7 @@ import { Image as IImage, useDataset } from 'sanity'
 import { urlForImage } from '../../../../sanity/lib/image'
 
 import Link from 'next/link';
-import Amountincrease from '@/app/components/Amountincrease';
+import Amountincrease from '@/app/components/Counter';
 
 export const getProductData:any = async(param='') => {
   console.log(param)

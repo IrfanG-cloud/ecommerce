@@ -4,6 +4,8 @@ import { Image as IImage } from 'sanity'
 import React, { useState } from 'react'
 import { FaMinus, FaPlus } from 'react-icons/fa'
 import { urlForImage } from '../../../sanity/lib/image'
+import Counter from '@/app/components/Counter'
+
 
 
 export default function page() {
@@ -33,9 +35,7 @@ export default function page() {
                             <div className='flex justify-between'>
                                 <span>price $</span>
                                 <div className='flex'>
-                                    <span><FaMinus /></span>
-                                    <span>2</span>
-                                    <span><FaPlus /></span>
+                                    <span><Counter /></span>
                                 </div>
                             </div>
                     </div>

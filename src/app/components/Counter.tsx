@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import { useSelector, useDispatch} from 'react-redux';
 import { counterActions } from '../../store/slice/counterSlice'
@@ -34,7 +34,7 @@ export default function Counter() {
         {/* <div className='text-2xl'>
             <h1>Quantity:</h1>
         </div> */}
-        <div className='flex ml-4'>
+        <div className='flex'>
             <button onClick={decrement} className='bg-[#cdcdcd] pl-4 pr-4 rounded-full'>
                 <FaMinus />
             </button>

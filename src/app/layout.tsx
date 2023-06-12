@@ -6,7 +6,6 @@ import { ClerkProvider } from '@clerk/nextjs'
 import Providers from './components/Provider'
 
 
-
 export const metadata = {
   title: 'Create Next App',
 }
@@ -20,9 +19,12 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body >
-        <Header />
-        <Providers>{children}</Providers>
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          
+          <Footer />
+        </Providers>
         </body>
     </html>
     </ClerkProvider>

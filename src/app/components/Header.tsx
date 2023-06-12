@@ -1,11 +1,17 @@
 "use client"
 
-import Link from 'next/link'
-import { useState } from "react"
-import { FaBars, FaTimesCircle, FaCartPlus, FaSearch} from "react-icons/fa"
+import Link from 'next/link';
+import { useState } from "react";
+import { FaBars, FaTimesCircle, FaCartPlus, FaSearch} from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { RootState } from '@/store/store';
 
 export default function Header() {
     const [navbar, setNavbar] = useState( false )
+
+    const cartValue = useSelector(
+        (state: RootState) => state.cartSlice.totalQuantity
+    );
 
   return (
     <nav className='w-full justisfy-between fixed top-0 right-0 z-20 bg-white py-2'>
@@ -48,7 +54,7 @@ export default function Header() {
                 <div className='md:flex'>
                     <Link href="/checkout">
                         <button>
-                            <span className='text-[#fa0404]'>0</span>
+                            <span className='text-[#fa0404]'>{cartValue}</span>
                             <FaCartPlus className='w-6 h-6 '/>
                         </button>
                     </Link>
